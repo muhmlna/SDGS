@@ -11,7 +11,7 @@ class ClientArchiveController extends Controller
     public function index()
     {
         $archives = Archive::all();
-        return view('client.archive.index', compact('archives'));
+        return view('client.archive', compact('archives'));
     }
 
     public function show($id)

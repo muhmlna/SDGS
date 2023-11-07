@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class ClientOurteamController extends Controller
 {
 
-    public function show($id)
+    public function index()
     {
-        $ourteam = Ourteam::findOrFail($id);
-        return view('client.ourteam', compact('ourteam'));
+        $ourteams = Ourteam::all();
+        return view('client.ourteam', compact('ourteams'));
     }
 
 }

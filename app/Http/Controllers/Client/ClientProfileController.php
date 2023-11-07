@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 class ClientProfileController extends Controller
 {
 
-    public function show($id)
+    public function index()
     {
-        $profile = Profile::findOrFail($id);
-        return view('client.profile', compact('profile'));
+        $profiles = Profile::all();
+        return view('client.profile', compact('profiles'));
     }
 
 }

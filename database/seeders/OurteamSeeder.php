@@ -16,7 +16,7 @@ class OurteamSeeder extends Seeder
         $ourteams = [
             [
                 'id' => 1,
-                'gambar' => NULL,
+                'gambar' => 'logo.png',
             ]
         ];
         Ourteam::query()->insert($ourteams);

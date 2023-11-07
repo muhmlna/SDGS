@@ -15,7 +15,7 @@ class CreateProfileTable extends Migration
     {
         Schema::create('profile', function (Blueprint $table) {
             $table->id();
-            $table->string('isi')->nullable();
+            $table->text('isi')->nullable();
             $table->timestamps();
         });
     }

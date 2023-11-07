@@ -14,6 +14,12 @@ class ClientArticleController extends Controller
         return view('client.article', compact('articles'));
     }
 
+    public function index2()
+    {
+        $articles = Article::all();
+        return view('client.article-details', compact('articles'));
+    }
+
     public function show($id)
     {
         $article = Article::findOrFail($id);
