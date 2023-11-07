@@ -18,6 +18,9 @@ class CreateJournalTable extends Migration
             $table->string('nama')->nullable();
             $table->string('isi')->nullable();
             $table->string('link')->nullable();
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('category')
+            ->constrained('journal')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

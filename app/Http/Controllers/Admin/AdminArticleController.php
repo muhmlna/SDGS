@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AdminArticleController extends Controller
@@ -16,7 +17,8 @@ class AdminArticleController extends Controller
 
     public function create()
     {
-        return view('admin.article.create');
+        $categories = Category::all();
+        return view('admin.article.create', compact('categories'));
     }
 
     public function store(Request $request)
@@ -24,11 +26,20 @@ class AdminArticleController extends Controller
         $request->validate([
             'nama' => 'required|max:255',
             'isi' => 'required',
-            'gambar' => 'required|max:2048',
+            'category_id' => 'required'
         ]);
 
-        Article::create($request->all());
+        
+        $article = Article::create($request->all());
 
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $nama_file = time() . '_' . $gambar->getClientOriginalName();
+            $article->gambar = $nama_file;
+            $article->update();
+            $gambar->move(public_path('assets/article/'), $nama_file);
+        }
+        
         return redirect()->route('admin.article.index')->with('sukses', 'Berhasil Tambah Data!');
     }
 
@@ -40,20 +51,27 @@ class AdminArticleController extends Controller
 
     public function edit($id)
     {
+        $categories = Category::all();
         $article = Article::findOrFail($id);
-        return view('admin.article.update', compact('article'));
+        return view('admin.article.update', compact('article', 'categories'));
     }
 
     public function update(Request $request, $id)
     {
+        $article = Article::where('id', $id)->first();
         $request->validate([
             'nama' => 'required|max:255',
             'isi' => 'required',
-            'gambar' => 'required|max:2048',
+            'category_id' => 'required'
         ]);
 
-        $article = Article::findOrFail($id);
-        $article->update($request->all());
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $nama_file = time() . '_' . $gambar->getClientOriginalName();
+            $article->gambar = $nama_file;
+            $article->update();
+            $gambar->move(public_path('assets/article/'), $nama_file);
+        }
 
         return redirect()->route('admin.article.index')->with('sukses', 'Berhasil Edit Data!');
     }

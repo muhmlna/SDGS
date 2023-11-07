@@ -10,6 +10,10 @@ class Journal extends Model
     use HasFactory;
 
     protected $table = 'journal';
-    protected $fillable = ['nama', 'isi', 'link'];
+    protected $fillable = ['nama', 'isi', 'link', 'category_id'];
 
+    public function category()
+    {
+        return $this->BelongsTo(Category::class, 'category_id', 'id');
+    }
 }

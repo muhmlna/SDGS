@@ -10,10 +10,10 @@ class Article extends Model
     use HasFactory;
 
     protected $table = 'article';
-    protected $fillable = ['nama', 'isi', 'gambar'];
+    protected $fillable = ['nama', 'isi', 'gambar', 'category_id'];
     
-    public function Category()
+    public function category()
     {
-        return $this->BelongsTo(Category::class);
+        return $this->BelongsTo(Category::class, 'category_id', 'id');
     }
 }
