@@ -25,6 +25,8 @@ class AdminEventController extends Controller
             'nama' => $request->nama,
             'isi' => $request->isi,
             'link' => $request->link,
+            'status' => $request->status,
+            'tgl_event' => $request->tgl_event
         ]);
 
         if ($request->hasFile('gambar')) {
@@ -57,6 +59,8 @@ class AdminEventController extends Controller
             'nama' => 'required|max:255',
             'isi' => 'required',
             'link' => 'required',
+            'status' => 'required',
+            'tgl_event' => 'required'
         ]);
 
         if ($request->hasFile('gambar')) {

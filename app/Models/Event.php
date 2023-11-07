@@ -10,6 +10,6 @@ class Event extends Model
     use HasFactory;
 
     protected $table = 'event';
-    protected $fillable = ['nama', 'isi', 'link', 'gambar'];
+    protected $fillable = ['nama', 'isi', 'link', 'gambar', 'status', 'tgl_event'];
 
 }

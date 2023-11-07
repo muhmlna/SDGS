@@ -20,9 +20,11 @@
                         <tr>
                             <th>No</th>
                             <th>Judul</th>
+                            <th>Pelaksanaan</th>
                             <th>Isi</th>
                             <th>Link</th>
                             <th>Gambar</th>
+                            <th>Status</th>
                             <th>More</th>
                         </tr>
                     </thead>
@@ -31,9 +33,11 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $event->nama }}</td>
+                                <td>{{ $event->tgl_event }}</td>
                                 <td>{{ $event->isi }}</td>
                                 <td><a href="{{ $event->link }}">{{ $event->link }}</a></td>
                                 <td><img class="img img-fluid" width="100" src="{{ asset('assets/event') }}/{{ $event->gambar }}" alt=""></td>
+                                <td>{{ $event->status }}</td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.event.show', $event->id) }}"
@@ -79,9 +83,11 @@
                         <tr>
                             <th>No</th>
                             <th>Judul</th>
+                            <th>Pelaksanaan</th>
                             <th>Isi</th>
                             <th>Link</th>
                             <th>Gambar</th>
+                            <th>Status</th>
                             <th>More</th>
                         </tr>
                     </tfoot>

@@ -68,6 +68,19 @@
                         </div>
                     </div>
                 </div>
+                <input type="hidden" name="status" id="status" value="Belum Terlaksana">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label class="form-label">Tanggal Pelaksanaan</label>
+                            <input type="date" class="form-control @error('tgl_event') is-invalid @enderror"
+                                placeholder="tgl_event" name="tgl_event" id="tgl_event" required>
+                            @error('tgl_event')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12 text-right">
                         <button type="submit" class="btn btn-primary">Simpan</button>

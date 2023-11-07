@@ -68,6 +68,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-control @error('status') is-invalid @enderror" name="status" id="status" disabled>
+                                <option value="{{ $event->status }}">{{ $event->status }}</option>
+                            </select>
+                            @error('status')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="text-right">

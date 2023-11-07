@@ -19,6 +19,8 @@ class CreateEventTable extends Migration
             $table->string('isi')->nullable();
             $table->string('link')->nullable();
             $table->string('gambar')->nullable();
+            $table->string('status')->nullable()->default('Belum Terlaksana');
+            $table->string('tgl_event')->nullable();
             $table->timestamps();
         });
     }
