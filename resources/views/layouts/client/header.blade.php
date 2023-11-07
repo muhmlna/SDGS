@@ -15,7 +15,7 @@
           </li>
           <li class="dropdown"><a href="#"><span>PUBLICATION</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="{{ route('article') }}" class="dropdown-item">Article</a></li>
+              <li><a href="{{ route('article.index') }}" class="dropdown-item">Article</a></li>
               <li><a href="{{ route('journal') }}" class="dropdown-item">Journal</a></li>
               <li><a href="{{ route('galery') }}" class="dropdown-item">Galery</a></li>
             </ul>

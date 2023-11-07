@@ -1,8 +1,7 @@
 @extends('layouts.client.app')
 
 @section('title', 'Profile')
-
-@section('textHome', 'text-success')
+ 
 
 @section('content')
 

@@ -37,8 +37,7 @@ use App\Http\Controllers\Client\ClientProfileController;
 
 Route::get('/', [HomeController::class, 'index'])->name('beranda');
 
-Route::get('/article', [ClientArticleController::class, 'index'])->name('article');
-Route::get('/article-details', [ClientArticleController::class, 'index2'])->name('article-detail');
+Route::resource('article', ClientArticleController::class);
 Route::get('/archive', [ClientArchiveController::class, 'index'])->name('archive');
 Route::get('/event', [ClientEventController::class, 'index'])->name('event');
 Route::get('/galery', [ClientGaleryController::class, 'index'])->name('galery');
