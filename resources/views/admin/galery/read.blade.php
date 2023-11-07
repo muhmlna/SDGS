@@ -26,10 +26,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <label class="form-label">Nama</label>
-                            <input type="text" class="form-control @error('nama') is-invalid @enderror"
-                                placeholder="nama" name="nama" id="nama" value="{{ $galery->nama }}" disabled>
-                            @error('nama')
+                            <label class="form-label">Gambar Galery</label>
+                            <input type="file" class="form-control @error('gambar') is-invalid @enderror"
+                                placeholder="gambar" name="gambar" id="gambar" value="{{ $galery->gambar }}" disabled>
+                            @error('gambar')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>

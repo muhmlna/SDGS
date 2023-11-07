@@ -15,7 +15,9 @@ class CreateArticleTable extends Migration
     {
         Schema::create('article', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('nama')->nullable();
+            $table->string('isi')->nullable();
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

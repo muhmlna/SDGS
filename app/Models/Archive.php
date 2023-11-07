@@ -10,6 +10,6 @@ class Archive extends Model
     use HasFactory;
 
     protected $table = 'archive';
-    protected $fillable = ['nama'];
+    protected $fillable = ['link', 'tahun'];
 
 }

@@ -24,12 +24,36 @@
                 @csrf
                 @method('PUT')
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-4">
                         <div class="mb-3">
-                            <label class="form-label">Nama</label>
+                            <label class="form-label">Judul</label>
                             <input type="text" class="form-control @error('nama') is-invalid @enderror"
                                 placeholder="nama" name="nama" id="nama" value="{{ $article->nama }}" required>
                             @error('nama')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label class="form-label">Isi</label>
+                            <input type="text" class="form-control @error('isi') is-invalid @enderror"
+                                placeholder="isi" name="isi" id="isi" value="{{ $article->isi }}" required>
+                            @error('isi')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label class="form-label">Gambar</label>
+                            <input type="file" class="form-control @error('gambar') is-invalid @enderror"
+                                placeholder="gambar" name="gambar" id="gambar" value="{{ $article->gambar }}" required>
+                            @error('gambar')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>

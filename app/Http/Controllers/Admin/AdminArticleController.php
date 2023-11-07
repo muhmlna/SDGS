@@ -23,6 +23,8 @@ class AdminArticleController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255',
+            'isi' => 'required',
+            'gambar' => 'required|max:2048',
         ]);
 
         Article::create($request->all());
@@ -46,6 +48,8 @@ class AdminArticleController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255',
+            'isi' => 'required',
+            'gambar' => 'required|max:2048',
         ]);
 
         $article = Article::findOrFail($id);

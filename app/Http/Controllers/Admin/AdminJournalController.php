@@ -23,6 +23,8 @@ class AdminJournalController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255',
+            'isi' => 'required',
+            'link' => 'required',
         ]);
 
         Journal::create($request->all());
@@ -46,6 +48,8 @@ class AdminJournalController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255',
+            'isi' => 'required',
+            'link' => 'required',
         ]);
 
         $journal = Journal::findOrFail($id);

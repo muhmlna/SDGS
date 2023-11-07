@@ -19,7 +19,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>Link</th>
                             <th>More</th>
                         </tr>
                     </thead>
@@ -28,6 +30,8 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $event->nama }}</td>
+                                <td>{{ $event->isi }}</td>
+                                <td>{{ $event->link }}</td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.event.show', $event->id) }}"
@@ -72,7 +76,9 @@
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>Link</th>
                             <th>More</th>
                         </tr>
                     </tfoot>

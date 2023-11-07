@@ -23,12 +23,24 @@
                 @csrf
                 @method('PUT')
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="mb-3">
-                            <label class="form-label">Nama</label>
-                            <input type="text" class="form-control @error('nama') is-invalid @enderror"
-                                placeholder="nama" name="nama" id="nama" value="{{ $archive->nama }}" required>
-                            @error('nama')
+                            <label class="form-label">Tahun</label>
+                            <input type="number" class="form-control @error('tahun') is-invalid @enderror"
+                                placeholder="2023" name="tahun" id="tahun" value="{{ $archive->tahun }}" required>
+                            @error('tahun')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label class="form-label">Link Archive</label>
+                            <input type="text" class="form-control @error('link') is-invalid @enderror"
+                                placeholder="https://google.com" name="link" id="link" value="{{ $archive->link }}" required>
+                            @error('link')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>

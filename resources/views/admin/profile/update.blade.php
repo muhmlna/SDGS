@@ -26,10 +26,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <label class="form-label">Nama</label>
-                            <input type="text" class="form-control @error('nama') is-invalid @enderror"
-                                placeholder="nama" name="nama" id="nama" value="{{ $profile->nama }}" required>
-                            @error('nama')
+                            <label class="form-label">Isi Profile</label>
+                            <input type="text" class="form-control @error('isi') is-invalid @enderror"
+                                placeholder="isi" name="isi" id="isi" value="{{ $profile->isi }}" required>
+                            @error('isi')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>

@@ -19,7 +19,8 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Tahun</th>
+                            <th>Link</th>
                             <th>More</th>
                         </tr>
                     </thead>
@@ -27,7 +28,8 @@
                         @foreach ($archives as $archive)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $archive->nama }}</td>
+                                <td>{{ $archive->tahun }}</td>
+                                <td>{{ $archive->link }}</td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.archive.show', $archive->id) }}"
@@ -72,7 +74,8 @@
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Tahun</th>
+                            <th>Link</th>
                             <th>More</th>
                         </tr>
                     </tfoot>

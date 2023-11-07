@@ -22,7 +22,7 @@ class AdminGaleryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required|max:255',
+            'gambar' => 'required|max:2048',
         ]);
 
         Galery::create($request->all());
@@ -45,7 +45,7 @@ class AdminGaleryController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required|max:255',
+            'gambar' => 'required|max:2048',
         ]);
 
         $galery = Galery::findOrFail($id);

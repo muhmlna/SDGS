@@ -22,7 +22,8 @@ class AdminArchiveController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required|max:255',
+            'tahun' => 'required|number',
+            'link' => 'required',
         ]);
 
         Archive::create($request->all());
@@ -45,7 +46,8 @@ class AdminArchiveController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required|max:255',
+            'tahun' => 'required|number',
+            'link' => 'required',
         ]);
 
         $archive = Archive::findOrFail($id);

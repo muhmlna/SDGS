@@ -20,7 +20,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>Link</th>
                             <th>More</th>
                         </tr>
                     </thead>
@@ -28,7 +30,9 @@
                         @foreach ($journals as $journal)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $journal->nama }}</td>
+                                <td>{{ $event->nama }}</td>
+                                <td>{{ $event->isi }}</td>
+                                <td>{{ $event->link }}</td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.journal.show', $journal->id) }}"
@@ -73,7 +77,9 @@
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>Link</th>
                             <th>More</th>
                         </tr>
                     </tfoot>

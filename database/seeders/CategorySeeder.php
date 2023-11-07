@@ -13,9 +13,20 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        $Categories = [
-
+        $categories = [
+            [
+                'id' => 1,
+                'nama' => 'Pendidikan'
+            ],
+            [
+                'id' => 2,
+                'nama' => 'Penelitian'
+            ],
+            [
+                'id' => 3,
+                'nama' => 'Pengabdian'
+            ],
         ];
-        Category::query()->insert($Categories);
+        Category::query()->insert($categories);
     }
 }

@@ -20,7 +20,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>Gambar</th>
                             <th>More</th>
                         </tr>
                     </thead>
@@ -29,6 +31,8 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $article->nama }}</td>
+                                <td>{{ $article->isi }}</td>
+                                <td>{{ $article->gambar }}</td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.article.show', $article->id) }}"
@@ -73,7 +77,9 @@
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Judul</th>
+                            <th>Isi</th>
+                            <th>Gambar</th>
                             <th>More</th>
                         </tr>
                     </tfoot>

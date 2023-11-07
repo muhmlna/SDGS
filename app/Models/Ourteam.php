@@ -10,6 +10,6 @@ class Ourteam extends Model
     use HasFactory;
 
     protected $table = 'ourteam';
-    protected $fillable = ['nama'];
+    protected $fillable = ['gambar'];
     
 }

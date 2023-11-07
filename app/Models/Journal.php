@@ -10,6 +10,6 @@ class Journal extends Model
     use HasFactory;
 
     protected $table = 'journal';
-    protected $fillable = ['nama'];
+    protected $fillable = ['nama', 'isi', 'link'];
 
 }

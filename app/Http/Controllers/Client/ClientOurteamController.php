@@ -8,16 +8,11 @@ use Illuminate\Http\Request;
 
 class ClientOurteamController extends Controller
 {
-    public function index()
-    {
-        $ourteams = Ourteam::all();
-        return view('client.ourteam', compact('ourteams'));
-    }
 
     public function show($id)
     {
         $ourteam = Ourteam::findOrFail($id);
-        return view('client.ourteam.read', compact('ourteam'));
+        return view('client.ourteam', compact('ourteam'));
     }
 
 }

@@ -20,7 +20,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Gambar</th>
                             <th>More</th>
                         </tr>
                     </thead>
@@ -28,7 +28,7 @@
                         @foreach ($galeries as $galery)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $galery->nama }}</td>
+                                <td>{{ $galery->gambar }}</td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.galery.show', $galery->id) }}"
@@ -73,7 +73,7 @@
                     <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Gambar</th>
                             <th>More</th>
                         </tr>
                     </tfoot>

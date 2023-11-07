@@ -23,6 +23,8 @@ class AdminEventController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255',
+            'isi' => 'required',
+            'link' => 'required',
         ]);
 
         Event::create($request->all());
@@ -46,6 +48,8 @@ class AdminEventController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255',
+            'isi' => 'required',
+            'link' => 'required',
         ]);
 
         $event = Event::findOrFail($id);
