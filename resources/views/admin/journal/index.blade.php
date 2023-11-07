@@ -21,6 +21,7 @@
                         <tr>
                             <th>No</th>
                             <th>Judul</th>
+                            <th>Kategori</th>
                             <th>Isi</th>
                             <th>Link</th>
                             <th>More</th>
@@ -31,6 +32,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $journal->nama }}</td>
+                                <td>{{ $journal->category->nama }}</td>
                                 <td>{{ $journal->isi }}</td>
                                 <td><a href="{{ $journal->link }}">{{ $journal->link }}</a></td>
                                 <td class="manage-row">
@@ -78,6 +80,7 @@
                         <tr>
                             <th>No</th>
                             <th>Judul</th>
+                            <th>Kategori</th>
                             <th>Isi</th>
                             <th>Link</th>
                             <th>More</th>

@@ -62,9 +62,8 @@
                     <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Kategori</label>
-                            <select class="col-sm-12 col-form-label rounded-2" name="category_id" id="category_id" disabled>
-                                <option value="{{ $article->category_id }}">{{ $article->category_id }}</option>
-                            </select>
+                            <input type="text" class="form-control @error('category_id') is-invalid @enderror"
+                                placeholder="https://google.com" name="category_id" id="category_id" value="{{ $article->category->nama }}" disabled>
                             @error('category_id')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

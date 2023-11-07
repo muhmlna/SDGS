@@ -59,6 +59,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="category_id" class="form-label">Kategori</label>
+                            <select class="form-control" name="category_id" id="category_id" required>
+                                @foreach ($categories as $category)
+                                    <option value="{{ $category->id }}" {{ $category->id == $journal->category_id ? 'selected' : '' }}>{{ $category->nama }}</option>
+                                @endforeach
+                            </select>
+                            @error('category_id')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-md-12 text-right">

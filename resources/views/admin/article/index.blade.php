@@ -21,6 +21,7 @@
                         <tr>
                             <th>No</th>
                             <th>Judul</th>
+                            <th>Kategori</th>
                             <th>Isi</th>
                             <th>Gambar</th>
                             <th>More</th>
@@ -31,6 +32,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $article->nama }}</td>
+                                <td>{{ $article->category->nama }}</td>
                                 <td>{{ $article->isi }}</td>
                                 <td>{{ $article->gambar }}</td>
                                 <td class="manage-row">
@@ -78,6 +80,7 @@
                         <tr>
                             <th>No</th>
                             <th>Judul</th>
+                            <th>Kategori</th>
                             <th>Isi</th>
                             <th>Gambar</th>
                             <th>More</th>
