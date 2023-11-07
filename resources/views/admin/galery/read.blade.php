@@ -27,7 +27,7 @@
                     <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Gambar Galery</label><br>
-                            <img class="img img-fluid p-3" width="500" src="{{ asset('assets/galery') }}/{{ $galery->gambar }}" alt="">
+                            <img class="img img-fluid py-3" width="500" src="{{ asset('assets/galery') }}/{{ $galery->gambar }}" alt="">
                             @error('gambar')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

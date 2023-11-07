@@ -61,7 +61,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <img class="img img-fluid p-3" width="500" src="{{ asset('assets/event') }}/{{ $event->gambar }}" alt="">
+                            <img class="img img-fluid py-3" width="500" src="{{ asset('assets/event') }}/{{ $event->gambar }}" alt="">
                             <input type="file" class="form-control @error('gambar') is-invalid @enderror"
                                 placeholder="gambar" name="gambar" id="gambar" value="{{ $event->gambar }}" required>
                             @error('gambar')

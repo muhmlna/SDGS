@@ -50,10 +50,26 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <label class="form-label">Gambar</label>
+                            <label class="form-label">Gambar</label><br>
+                            <img class="img img-fluid py-3" width="500" src="{{ asset('assets/article') }}/{{ $article->gambar }}" alt="">
                             <input type="file" class="form-control @error('gambar') is-invalid @enderror"
-                                placeholder="gambar" name="gambar" id="gambar" value="{{ $article->gambar }}" required>
+                                placeholder="gambar" name="gambar" id="gambar" value="{{ $article->gambar }}" enabled>
                             @error('gambar')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label class="form-label">Kategori</label>
+                            <select class="col-sm-12 col-form-label rounded-2" name="category_id" id="category_id" required>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id == $article->category_id }}">{{ $category->nama }}</option>
+                            @endforeach
+                            </select>
+                            @error('category_id')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
