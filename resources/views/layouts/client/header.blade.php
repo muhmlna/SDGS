@@ -6,7 +6,7 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="{{ route('beranda') }}">Home</a></li>
+          <li><a class="active" href="{{ route('beranda') }}">HOME</a></li>
           <li class="dropdown"><a href="#"><span>ABOUT US</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{{ route('profile') }}" class="dropdown-item">Profile</a></li>

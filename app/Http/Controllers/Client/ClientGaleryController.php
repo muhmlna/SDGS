@@ -10,7 +10,7 @@ class ClientGaleryController extends Controller
 {
     public function index()
     {
-        $galeries = Galery::all();
+        $galeries = Galery::latest('id')->take(9)->get();
         return view('client.galery', compact('galeries'));
     }
 

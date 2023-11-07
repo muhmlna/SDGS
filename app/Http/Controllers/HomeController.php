@@ -31,6 +31,7 @@ class HomeController extends Controller
         $article = Article::all()->count();
         $journal = Journal::all()->count();
         $galery = Galery::all()->count();
-        return view('client.index', compact('event', 'article', 'journal', 'galery'));
+        $articles = Article::latest('id')->take(3)->get();
+        return view('client.index', compact('event', 'article', 'journal', 'galery', 'articles'));
     }
 }

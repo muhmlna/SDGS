@@ -10,7 +10,7 @@ class ClientEventController extends Controller
 {
     public function index()
     {
-        $events = Event::all();
+        $events = Event::latest('id')->take(4)->get();
         return view('client.event', compact('events'));
     }
 

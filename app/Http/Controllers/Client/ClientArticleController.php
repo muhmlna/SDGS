@@ -10,7 +10,7 @@ class ClientArticleController extends Controller
 {
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::latest('id')->take(3)->get();
         return view('client.article', compact('articles'));
     }
 

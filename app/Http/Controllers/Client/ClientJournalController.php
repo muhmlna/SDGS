@@ -10,7 +10,7 @@ class ClientJournalController extends Controller
 {
     public function index()
     {
-        $journals = Journal::all();
+        $journals = Journal::latest('id')->take(6)->get();;
         return view('client.journal', compact('journals'));
     }
 
