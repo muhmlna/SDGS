@@ -24,7 +24,7 @@
                 @csrf
                 @method('PUT')
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Judul</label>
                             <input type="text" class="form-control @error('nama') is-invalid @enderror"
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Isi</label>
                             <input type="text" class="form-control @error('isi') is-invalid @enderror"
@@ -48,11 +48,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Link</label>
                             <input type="text" class="form-control @error('link') is-invalid @enderror"
-                                placeholder="link" name="link" id="link" value="{{ $journal->link }}" disabled>
+                                placeholder="https://google.com" name="link" id="link" value="{{ $journal->link }}" disabled>
                             @error('link')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

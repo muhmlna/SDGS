@@ -29,7 +29,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $archive->tahun }}</td>
-                                <td>{{ $archive->link }}</td>
+                                <td><a href="{{ $archive->link }}">{{ $archive->link }}</a></td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.archive.show', $archive->id) }}"

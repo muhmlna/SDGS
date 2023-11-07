@@ -21,13 +21,19 @@ class AdminEventController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => 'required|max:255',
-            'isi' => 'required',
-            'link' => 'required',
+        $event = Event::create([
+            'nama' => $request->nama,
+            'isi' => $request->isi,
+            'link' => $request->link,
         ]);
 
-        Event::create($request->all());
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $nama_file = time() . '_' . $gambar->getClientOriginalName();
+            $event->gambar = $nama_file;
+            $event->update();
+            $gambar->move(public_path('assets/event/'), $nama_file);
+        }
 
         return redirect()->route('admin.event.index')->with('sukses', 'Berhasil Tambah Data!');
     }
@@ -46,14 +52,20 @@ class AdminEventController extends Controller
 
     public function update(Request $request, $id)
     {
+        $event = Event::where('id', $id)->first();
         $request->validate([
             'nama' => 'required|max:255',
             'isi' => 'required',
             'link' => 'required',
         ]);
 
-        $event = Event::findOrFail($id);
-        $event->update($request->all());
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $nama_file = time() . '_' . $gambar->getClientOriginalName();
+            $event->gambar = $nama_file;
+            $event->update();
+            $gambar->move(public_path('assets/event/'), $nama_file);
+        }
 
         return redirect()->route('admin.event.index')->with('sukses', 'Berhasil Edit Data!');
     }

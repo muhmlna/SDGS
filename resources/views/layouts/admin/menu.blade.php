@@ -51,13 +51,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{ route('admin.profile.index') }}" class="nav-link @yield('profile')">
+                        <a href="/admin/profile/1/edit" class="nav-link @yield('profile')">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Profile</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('admin.ourteam.index') }}" class="nav-link @yield('ourteam')">
+                        <a href="/admin/ourteam/1/edit" class="nav-link @yield('ourteam')">
                             <i class="far fa-circle nav-icon"></i>
                             <p>Our Team</p>
                         </a>

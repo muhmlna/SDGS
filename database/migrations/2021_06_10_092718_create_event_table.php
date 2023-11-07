@@ -18,6 +18,7 @@ class CreateEventTable extends Migration
             $table->string('nama')->nullable();
             $table->string('isi')->nullable();
             $table->string('link')->nullable();
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

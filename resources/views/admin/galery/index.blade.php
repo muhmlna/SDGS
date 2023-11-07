@@ -28,7 +28,7 @@
                         @foreach ($galeries as $galery)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $galery->gambar }}</td>
+                                <td><img class="img img-fluid" width="100" src="{{ asset('assets/galery') }}/{{ $galery->gambar }}" alt=""></td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.galery.show', $galery->id) }}"

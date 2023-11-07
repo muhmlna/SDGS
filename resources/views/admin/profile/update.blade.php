@@ -5,12 +5,6 @@
 @section('info', 'active')
 @section('profile', 'active')
 
-@section('backlink')
-    @if (auth()->user()->roles_id == 1)
-        <a href="{{ route('admin.profile.index') }}"><i class="fa small pr-1 fa-arrow-left text-dark"></i></a>
-    @endif
-@endsection
-
 @section('content')
 
     <!-- Edit profile -->
@@ -27,8 +21,7 @@
                     <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Isi Profile</label>
-                            <input type="text" class="form-control @error('isi') is-invalid @enderror"
-                                placeholder="isi" name="isi" id="isi" value="{{ $profile->isi }}" required>
+                            <textarea class="form-control @error('isi') is-invalid @enderror" placeholder="isi" name="isi" id="isi" enabled>{{ $profile->isi }}</textarea>
                             @error('isi')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

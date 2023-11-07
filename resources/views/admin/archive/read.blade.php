@@ -23,7 +23,7 @@
                 @csrf
                 @method('PUT')
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Tahun</label>
                             <input type="number" class="form-control @error('tahun') is-invalid @enderror"
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Link Archive</label>
                             <input type="text" class="form-control @error('link') is-invalid @enderror"

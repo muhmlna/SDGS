@@ -18,13 +18,13 @@ class AdminProfileController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required|max:255',
+            'isi' => 'required|max:255',
         ]);
 
         $profile = Profile::findOrFail($id);
         $profile->update($request->all());
 
-        return redirect()->route('admin.profile.index')->with('sukses', 'Berhasil Edit Data!');
+        return redirect('/admin/profile/1/edit')->with('sukses', 'Berhasil Edit Data!');
     }
 
 }

@@ -22,7 +22,7 @@ class AdminArchiveController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'tahun' => 'required|number',
+            'tahun' => 'required|max:255',
             'link' => 'required',
         ]);
 
@@ -46,7 +46,7 @@ class AdminArchiveController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'tahun' => 'required|number',
+            'tahun' => 'required|max:255',
             'link' => 'required',
         ]);
 

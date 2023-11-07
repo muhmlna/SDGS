@@ -30,9 +30,9 @@
                         @foreach ($journals as $journal)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $event->nama }}</td>
-                                <td>{{ $event->isi }}</td>
-                                <td>{{ $event->link }}</td>
+                                <td>{{ $journal->nama }}</td>
+                                <td>{{ $journal->isi }}</td>
+                                <td><a href="{{ $journal->link }}">{{ $journal->link }}</a></td>
                                 <td class="manage-row">
                                     @if (auth()->user()->roles_id == 1)
                                         <a href="{{ route('admin.journal.show', $journal->id) }}"

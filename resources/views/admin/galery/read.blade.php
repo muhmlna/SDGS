@@ -26,9 +26,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <label class="form-label">Gambar Galery</label>
-                            <input type="file" class="form-control @error('gambar') is-invalid @enderror"
-                                placeholder="gambar" name="gambar" id="gambar" value="{{ $galery->gambar }}" disabled>
+                            <label class="form-label">Gambar Galery</label><br>
+                            <img class="img img-fluid p-3" width="500" src="{{ asset('assets/galery') }}/{{ $galery->gambar }}" alt="">
                             @error('gambar')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror

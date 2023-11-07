@@ -24,7 +24,7 @@
                 @csrf
                 @method('PUT')
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Judul</label>
                             <input type="text" class="form-control @error('nama') is-invalid @enderror"
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Isi</label>
                             <input type="text" class="form-control @error('isi') is-invalid @enderror"
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Gambar</label>
                             <input type="file" class="form-control @error('gambar') is-invalid @enderror"

@@ -20,7 +20,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-12">
             <div class="box">
               <ul>
                 <li>2021</li>
@@ -31,7 +31,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-12">
             <div class="box">
               <ul>
                 <li>2022</li>
@@ -42,7 +42,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-12">
             <div class="box">
               <ul>
                 <li>2023</li>

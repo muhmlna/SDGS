@@ -21,11 +21,15 @@ class AdminGaleryController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'gambar' => 'required|max:2048',
-        ]);
+        $galery = Galery::create();
 
-        Galery::create($request->all());
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $nama_file = time() . '_' . $gambar->getClientOriginalName();
+            $galery->gambar = $nama_file;
+            $galery->update();
+            $gambar->move(public_path('assets/galery/'), $nama_file);
+        }
 
         return redirect()->route('admin.galery.index')->with('sukses', 'Berhasil Tambah Data!');
     }
@@ -44,12 +48,21 @@ class AdminGaleryController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'gambar' => 'required|max:2048',
-        ]);
-
         $galery = Galery::findOrFail($id);
-        $galery->update($request->all());
+
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $nama_file = time() . '_' . $gambar->getClientOriginalName();
+            
+            // Simpan nama file gambar ke dalam kolom 'gambar'
+            $galery->gambar = $nama_file;
+            
+            // Simpan perubahan ke dalam database
+            $galery->save();
+            
+            // Pindahkan file gambar ke direktori yang ditentukan
+            $gambar->move(public_path('assets/galery/'), $nama_file);
+        }
 
         return redirect()->route('admin.galery.index')->with('sukses', 'Berhasil Edit Data!');
     }

@@ -16,15 +16,26 @@ class AdminOurteamController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
-        $request->validate([
-            'gambar' => 'required|max:2048',
-        ]);
+{
+    // Menggunakan metode findOrFail untuk menemukan Ourteam yang akan diperbarui
+    $ourteam = Ourteam::findOrFail($id);
 
-        $ourteam = Ourteam::findOrFail($id);
-        $ourteam->update($request->all());
-
-        return redirect()->route('admin.ourteam.index')->with('sukses', 'Berhasil Edit Data!');
+    if ($request->hasFile('gambar')) {
+        $gambar = $request->file('gambar');
+        $nama_file = time() . '_' . $gambar->getClientOriginalName();
+        
+        // Simpan nama file gambar ke dalam kolom 'gambar'
+        $ourteam->gambar = $nama_file;
+        
+        // Simpan perubahan ke dalam database
+        $ourteam->save();
+        
+        // Pindahkan file gambar ke direktori yang ditentukan
+        $gambar->move(public_path('assets/ourteam/'), $nama_file);
     }
+
+    return redirect('/admin/ourteam/1/edit')->with('sukses', 'Berhasil Edit Data!');
+}
+
 
 }
