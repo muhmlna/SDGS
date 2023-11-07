@@ -86,7 +86,7 @@
             <!-- Brand Logo -->
             <a href="#" class="brand-link px-3">
                 <img src="{{ asset('assets/img/logo.2.png') }}" alt="Logo" class="img img-fluid bg-light" width="90">
-                <!-- <span class="brand-text font-weight-normal text-white">SDGs Center ITERA</span> -->
+                <!-- <span class="brand-text font-weight-normal ">SDGs Center ITERA</span> -->
             </a>
 
             <!-- Sidebar -->
@@ -104,7 +104,7 @@
                         @endif
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block text-white">{{ auth()->user()->nama }}</a>
+                        <a href="#" class="d-block ">{{ auth()->user()->nama }}</a>
                     </div>
                 </div>
 
@@ -114,7 +114,7 @@
                         <input class="form-control form-control-sidebar" type="search" placeholder="Search"
                             aria-label="Search">
                         <div class="input-group-append">
-                            <button class="btn btn-sidebar text-white">
+                            <button class="btn btn-sidebar ">
                                 <i class="fas fa-search fa-fw"></i>
                             </button>
                         </div>
