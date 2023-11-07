@@ -2,8 +2,8 @@
 
 @section('title', 'Detail article')
 
-@section('dataBuku', 'active')
-@section('kelolaarticle', 'active')
+@section('publication', 'active')
+@section('article', 'active')
 
 @section('backlink')
     @if (auth()->user()->roles_id == 1)

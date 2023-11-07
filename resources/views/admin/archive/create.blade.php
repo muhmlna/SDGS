@@ -2,8 +2,7 @@
 
 @section('title', 'Tambah archive')
 
-@section('dataBuku', 'active')
-@section('kelolaarchive', 'active')
+@section('archive', 'active')
 
 @section('backlink')
     @if (auth()->user()->roles_id == 1)

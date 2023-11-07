@@ -2,8 +2,7 @@
 
 @section('title', 'Edit event')
 
-@section('dataBuku', 'active')
-@section('kelolaevent', 'active')
+@section('event', 'active')
 
 @section('backlink')
     @if (auth()->user()->roles_id == 1)

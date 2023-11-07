@@ -82,11 +82,11 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar elevation-4" style="background-color: #0A6F8F">
+        <aside class="main-sidebar elevation-4 bg-light" >
             <!-- Brand Logo -->
             <a href="#" class="brand-link px-3">
-                <!-- <img src="{{ asset('assets/favicon/apple-icon-180x180.png') }}" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
-                <span class="brand-text font-weight-normal text-white">SDGs Center ITERA</span>
+                <img src="{{ asset('assets/img/logo.2.png') }}" alt="Logo" class="img img-fluid bg-light" width="90">
+                <!-- <span class="brand-text font-weight-normal text-white">SDGs Center ITERA</span> -->
             </a>
 
             <!-- Sidebar -->

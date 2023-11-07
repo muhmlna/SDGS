@@ -2,8 +2,8 @@
 
 @section('title', 'Tambah ourteam')
 
-@section('dataBuku', 'active')
-@section('kelolaourteam', 'active')
+@section('info', 'active')
+@section('ourteam', 'active')
 
 @section('backlink')
     @if (auth()->user()->roles_id == 1)

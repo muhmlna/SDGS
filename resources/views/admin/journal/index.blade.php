@@ -2,8 +2,8 @@
 
 @section('title', 'Kelola journal')
 
-@section('dataBuku', 'active')
-@section('kelolajournal', 'active')
+@section('publication', 'active')
+@section('journal', 'active')
 
 @section('content')
 

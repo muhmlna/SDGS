@@ -2,8 +2,8 @@
 
 @section('title', 'Kelola profile')
 
-@section('dataBuku', 'active')
-@section('kelolaprofile', 'active')
+@section('info', 'active')
+@section('profile', 'active')
 
 @section('content')
 

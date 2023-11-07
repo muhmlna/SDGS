@@ -2,8 +2,8 @@
 
 @section('title', 'Tambah galery')
 
-@section('dataBuku', 'active')
-@section('kelolagalery', 'active')
+@section('publication', 'active')
+@section('galery', 'active')
 
 @section('backlink')
     @if (auth()->user()->roles_id == 1)
