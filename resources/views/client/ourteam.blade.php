@@ -10,8 +10,8 @@
     <section id="ourteam" class="ourteam">
         <div class="entry-content">
         @foreach ($ourteams as $ourteam)
-        <img class="img img-fluid" width="100%" src="{{ asset('assets/ourteam') }}/{{ $ourteam->gambar }}" alt="">
-            @endforeach
+            <img class="img img-fluid" width="100%" src="{{ asset('assets/ourteam') }}/{{ $ourteam->gambar }}" alt="">
+        @endforeach
         </div>
         <!-- .entry-content -->    
     </section>

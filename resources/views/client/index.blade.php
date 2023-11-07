@@ -59,22 +59,22 @@
         <div class="row counters">
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ $event }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Events</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ $article }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Article</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ $journal }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Journal</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="{{ $galery }}" data-purecounter-duration="1" class="purecounter"></span>
             <p>Galery</p>
           </div>
 
@@ -221,7 +221,7 @@
 
         <div class="section-title">
           <h2>Publication</h2>
-          <p>Popular Article</p>
+          <p>News Article</p>
         </div>
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">

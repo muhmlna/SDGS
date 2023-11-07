@@ -20,39 +20,19 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-md-12">
+        @foreach ($archives as $archive)
+          <div class="col-md-4">
             <div class="box">
               <ul>
-                <li>2021</li>
+                <li>{{$archive->tahun}}</li>
                 <li>Sustainability Report</li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">DOWNLOAD</a>
+                <a href="{{$archive->link}}" class="btn-buy">DOWNLOAD</a>
               </div>
             </div>
           </div>
-          <div class="col-md-12">
-            <div class="box">
-              <ul>
-                <li>2022</li>
-                <li>Sustainability Report</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">DOWNLOAD</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="box">
-              <ul>
-                <li>2023</li>
-                <li>Sustainability Report</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">DOWNLOAD</a>
-              </div>
-            </div>
-          </div>
+        @endforeach
         </div>
         
       </div>
