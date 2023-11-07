@@ -50,17 +50,6 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <label class="form-label">Gambar Article</label><br>
-                            <img class="img img-fluid py-3" width="500" src="{{ asset('assets/article') }}/{{ $article->gambar }}" alt="">
-                            @error('gambar')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="mb-3">
                             <label class="form-label">Kategori</label>
                             <input type="text" class="form-control @error('category_id') is-invalid @enderror"
                                 placeholder="https://google.com" name="category_id" id="category_id" value="{{ $article->category->nama }}" disabled>
@@ -70,7 +59,18 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label class="form-label">Gambar Article</label><br>
+                            <img class="img img-fluid py-3" width="500" src="{{ asset('assets/article') }}/{{ $article->gambar }}" alt="">
+                            @error('gambar')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="text-right">
                         <a href="{{ route('admin.article.edit', $article->id) }}" class="btn btn-primary">Edit</a>

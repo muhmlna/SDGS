@@ -48,18 +48,6 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <label class="form-label">Gambar</label>
-                            <input type="file" class="form-control @error('gambar') is-invalid @enderror"
-                                placeholder="gambar" name="gambar" id="gambar" required>
-                            @error('gambar')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="mb-3">
                             <label class="form-label">Kategori</label>
                             <select class="col-sm-12 col-form-label rounded-2" name="category_id" id="category_id" required>
                             @foreach ($categories as $category)
@@ -72,6 +60,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label class="form-label">Gambar</label>
+                            <input type="file" class="form-control @error('gambar') is-invalid @enderror"
+                                placeholder="gambar" name="gambar" id="gambar" required>
+                            @error('gambar')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="col-md-12 text-right">
                         <button type="submit" class="btn btn-primary">Simpan</button>

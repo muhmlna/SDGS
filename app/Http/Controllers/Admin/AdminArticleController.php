@@ -73,6 +73,8 @@ class AdminArticleController extends Controller
             $gambar->move(public_path('assets/article/'), $nama_file);
         }
 
+        $article->update($request->all());
+
         return redirect()->route('admin.article.index')->with('sukses', 'Berhasil Edit Data!');
     }
 
