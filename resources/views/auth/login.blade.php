@@ -3,17 +3,17 @@
 @section('title', 'Login')
 
 @section('content')
-    <div class="card col-md-4 mx-auto my-5 p-5 border border-success">
-        <h3 class="text-center text-success">MASUK</h3>
+    <div class="col-md-4 mx-auto my-5 py-5">
+        <h3 class="text-center pt-5 mt-3 text-success font-weight-bold">MASUK</h3>
         <div class="d-flex justify-content-center align-items-center mt-3">
             <form action="{{ route('login') }}" method="POST" class="">
                 @csrf
-                <input class="form-control @error('email') is-invalid @enderror" name="email" value="admin@admin.com"
+                <input class="form-control mt-3 @error('email') is-invalid @enderror" name="email" value="admin@admin.com"
                     required autofocus type="text" name="email" id="email" placeholder="email">
                 @error('email')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
-                <input class="form-control @error('password') is-invalid @enderror" name="password" value="password"
+                <input class="form-control mt-3 @error('password') is-invalid @enderror" name="password" value="password"
                     required type="password" id="password" placeholder="password">
                 @error('password')
                     <div class="alert alert-danger">{{ $message }}</div>
