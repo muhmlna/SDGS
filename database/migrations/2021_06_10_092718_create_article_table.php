@@ -16,7 +16,7 @@ class CreateArticleTable extends Migration
         Schema::create('article', function (Blueprint $table) {
             $table->id();
             $table->string('nama')->nullable();
-            $table->string('isi')->nullable();
+            $table->text('isi')->nullable();
             $table->string('gambar')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('category')

@@ -178,7 +178,7 @@
                 SDGs Center ITERA berperan penting dalam mencapai tujuan-tujuan ini dengan tiga fokus utama: Penelitian, Pendidikan, dan Pengabdian.
               </p>
               <div class="text-center">
-                <a href="article.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                <a href="article" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>

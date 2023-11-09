@@ -74,7 +74,7 @@
                     <div class="col-md-12">
                         <div class="mb-3">
                             <label class="form-label">Status Pelaksanaan</label>
-                            <select class="form-control @error('status') is-invalid @enderror" name="status" id="status" disabled>
+                            <select class="form-control @error('status') is-invalid @enderror" name="status" id="status" required>
                                 <option value="{{ $event->status }}">{{ $event->status }}</option>
                                 <option value="Belum Terlaksana">Belum Terlaksana</option>
                                 <option value="Terlaksana">Terlaksana</option>

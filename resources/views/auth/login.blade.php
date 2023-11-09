@@ -8,7 +8,7 @@
         <div class="d-flex justify-content-center align-items-center mt-3">
             <form action="{{ route('login') }}" method="POST" class="">
                 @csrf
-                <input class="form-control mt-3 @error('email') is-invalid @enderror" name="email" value="admin@admin.com"
+                <input class="form-control mt-3 @error('email') is-invalid @enderror" name="email" value="admin@sdgs.itera.ac.id"
                     required autofocus type="text" name="email" id="email" placeholder="email">
                 @error('email')
                     <div class="alert alert-danger">{{ $message }}</div>

@@ -24,7 +24,7 @@
         @foreach ($events as $event)
         <div class="col-md-6 d-flex align-items-stretch">
             <div class="card">
-              <div class="card-img">
+              <div class="card-img ">
                 <img src="{{ asset('assets/event') }}/{{ $event->gambar }}" alt="...">
               </div>
               <div class="card-body">

@@ -20,10 +20,10 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
         $this->call(ProfileSeeder::class);
         $this->call(OurteamSeeder::class);
-        // $this->call(ArchiveSeeder::class);
-        // $this->call(EventSeeder::class);
-        // $this->call(JournalSeeder::class);
-        // $this->call(ArticleSeeder::class);
-        // $this->call(GalerySeeder::class);
+        $this->call(ArchiveSeeder::class);
+        $this->call(EventSeeder::class);
+        $this->call(JournalSeeder::class);
+        $this->call(ArticleSeeder::class);
+        $this->call(GalerySeeder::class);
     }
 }
