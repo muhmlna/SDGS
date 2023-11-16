@@ -22,7 +22,6 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
         @foreach ($articles as $article)    
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
           <div class="course-item">

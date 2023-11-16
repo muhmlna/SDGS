@@ -18,7 +18,7 @@ class AdminProfileController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'isi' => 'required|max:255',
+            'isi' => 'required',
         ]);
 
         $profile = Profile::findOrFail($id);

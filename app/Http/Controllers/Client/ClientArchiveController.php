@@ -10,7 +10,7 @@ class ClientArchiveController extends Controller
 {
     public function index()
     {
-        $archives = Archive::first('id')->take(3)->get();;
+        $archives = Archive::first('id')->take(6)->get();;
         return view('client.archive', compact('archives'));
     }
 

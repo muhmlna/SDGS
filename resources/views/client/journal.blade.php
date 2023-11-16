@@ -15,10 +15,12 @@
 
         <h1 class="mt-3">Journal</h1>
         @foreach ($journals as $journal)
-            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="course-item">
                 <div class="course-content">
-                  <h3><a href="{{ $journal->link }}">{{ $journal->nama }}</a></h3>
+                  <div class="d-flex justify-content-between align-items-center mb-3" >
+                    <h3><a href="{{ $journal->link }}">{{ $journal->nama }}</a></h3>
+                  </div>
                   <p>{{ $journal->isi }}</p>
                   <a href="{{ $journal->link }}" class="btn rounded text-light" style="background-color: #0A6F8F;">Download</a>
                 </div>
