@@ -31,7 +31,7 @@ class AdminOurteamController extends Controller
         $ourteam->save();
         
         // Pindahkan file gambar ke direktori yang ditentukan
-        $gambar->move(public_path('assets/ourteam/'), $nama_file);
+        $gambar->move('../public/assets/ourteam/', $nama_file);
     }
 
     return redirect('/admin/ourteam/1/edit')->with('sukses', 'Berhasil Edit Data!');

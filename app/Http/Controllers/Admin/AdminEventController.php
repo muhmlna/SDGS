@@ -34,7 +34,7 @@ class AdminEventController extends Controller
             $nama_file = time() . '_' . $gambar->getClientOriginalName();
             $event->gambar = $nama_file;
             $event->update();
-            $gambar->move(public_path('assets/event/'), $nama_file);
+            $gambar->move('../public/assets/event/', $nama_file);
         }
 
         return redirect()->route('admin.event.index')->with('sukses', 'Berhasil Tambah Data!');
@@ -68,7 +68,7 @@ class AdminEventController extends Controller
             $nama_file = time() . '_' . $gambar->getClientOriginalName();
             $event->gambar = $nama_file;
             $event->update();
-            $gambar->move(public_path('assets/event/'), $nama_file);
+            $gambar->move('../public/assets/event/', $nama_file);
         }
 
         return redirect()->route('admin.event.index')->with('sukses', 'Berhasil Edit Data!');

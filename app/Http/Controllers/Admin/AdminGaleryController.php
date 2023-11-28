@@ -28,7 +28,7 @@ class AdminGaleryController extends Controller
             $nama_file = time() . '_' . $gambar->getClientOriginalName();
             $galery->gambar = $nama_file;
             $galery->update();
-            $gambar->move(public_path('assets/galery/'), $nama_file);
+            $gambar->move('../public/assets/galery/', $nama_file);
         }
 
         return redirect()->route('admin.galery.index')->with('sukses', 'Berhasil Tambah Data!');
@@ -61,7 +61,7 @@ class AdminGaleryController extends Controller
             $galery->save();
             
             // Pindahkan file gambar ke direktori yang ditentukan
-            $gambar->move(public_path('assets/galery/'), $nama_file);
+            $gambar->move('../public/assets/galery/', $nama_file);
         }
 
         return redirect()->route('admin.galery.index')->with('sukses', 'Berhasil Edit Data!');

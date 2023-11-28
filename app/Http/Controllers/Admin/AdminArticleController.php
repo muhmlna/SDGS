@@ -37,7 +37,7 @@ class AdminArticleController extends Controller
             $nama_file = time() . '_' . $gambar->getClientOriginalName();
             $article->gambar = $nama_file;
             $article->update();
-            $gambar->move(public_path('assets/article/'), $nama_file);
+            $gambar->move('../public/assets/article/', $nama_file);
         }
         
         return redirect()->route('admin.article.index')->with('sukses', 'Berhasil Tambah Data!');
@@ -70,7 +70,7 @@ class AdminArticleController extends Controller
             $nama_file = time() . '_' . $gambar->getClientOriginalName();
             $article->gambar = $nama_file;
             $article->update();
-            $gambar->move(public_path('assets/article/'), $nama_file);
+            $gambar->move('../public/assets/article/', $nama_file);
         }
 
         $article->update($request->all());
