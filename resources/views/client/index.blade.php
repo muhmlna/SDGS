@@ -8,9 +8,9 @@
 <section id="carousel" class="d-flex justify-content-center align-items-center">
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
-      @foreach ($galeries as $galery)    
+      @foreach ($galeries as $galeri)    
           <div class="carousel-item active">
-              <img class="w-100" src="{{ asset('assets/galery') }}/{{ $galery->gambar }}" alt="Image">
+              <img class="w-100" src="{{ asset('assets/galery') }}/{{ $galeri->gambar }}" alt="Image">
           </div>
       @endforeach
       </div>
